@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ChildAComponent } from './child-a/child-a.component';
-import { ChildBComponent } from './child-b/child-b.component';
-import { NameEditorComponent } from './name-editor/name-editor.component';
+import { FirstComponent } from './pages/first/first.component'; 
+import { SecondComponent } from './pages/second/second.component'; 
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ChildAComponent } from './pages/child-a/child-a.component'; 
+import { ChildBComponent } from './pages/child-b/child-b.component'; 
+import { NameEditorComponent } from './pages/name-editor/name-editor.component'; 
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { ProfileEditorComponent } from './pages/profile-editor/profile-editor.component'; 
+import { ListComponent } from './pages/list/list.component'; 
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     ChildAComponent,
     ChildBComponent,
     NameEditorComponent,
-    ProfileEditorComponent
+    ProfileEditorComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

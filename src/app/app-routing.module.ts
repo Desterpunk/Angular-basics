@@ -1,3 +1,4 @@
+import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ChildBComponent } from './child-b/child-b.component';
 import { ChildAComponent } from './child-a/child-a.component';
 import { NgModule } from '@angular/core';
@@ -22,6 +23,7 @@ const routes: Routes = [
     ],
   },
   { path: 'second-component', component: SecondComponent },
+  { path: 'name-editor', component: NameEditorComponent },
   { path: '',   redirectTo: '/first-component', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

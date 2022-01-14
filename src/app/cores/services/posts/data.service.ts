@@ -13,7 +13,19 @@ export class DataService {
     private http: HttpClient
   ) { }
 
-  getAllCities(): Observable<PostI[]>{
+  getAllPosts(): Observable<PostI[]>{
     return this.http.get<PostI[]>(this.urlApi);
+  }
+
+  addNewPost(post: PostI):Observable<PostI>{
+    return this.http.post<PostI>(this.urlApi, post);
+  }
+
+  updatePost(post: PostI):Observable<PostI>{
+    return this.http.put<PostI>(`${this.urlApi}/${post.id}`, post);
+  }
+
+  deletePost(id: string):Observable<{}>{
+    return this.http.delete(`${this.urlApi}/${id}`);
   }
 }

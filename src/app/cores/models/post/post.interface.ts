@@ -1,5 +1,5 @@
 export interface PostI{
-    id:string;
+    id?:string;
     image:string;
     tittle:string;
     subtittle: string,

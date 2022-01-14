@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NameEditorComponent } from './name-editor.component';
@@ -8,7 +9,8 @@ describe('NameEditorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NameEditorComponent ]
+      declarations: [ NameEditorComponent ],
+      imports: [ReactiveFormsModule]
     })
     .compileComponents();
   });

@@ -1,5 +1,34 @@
-<ul>
-    <li *ngFor="let post of posts">
-        {{post.tittle}}
-    </li>
+<p>{{ posts | json }}</p>
+
+<p>editOn: {{ editOn }}</p>
+
+<p>selectedPost: {{ selectedPost | json }}</p>
+
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let post of posts"
+    (click)="onSelectPost(post)"
+    (dblclick)="toggleEditOn()"
+  >
+    <span class="badge bg-primary">
+      {{ post.tittle }}
+    </span>
+    <span class="badge bg-danger" (click)="onDeletePost(post)"> X </span>
+  </li>
 </ul>
+
+<div class="input-group mt-2" *ngIf="editOn">
+  <input
+    type="text"
+    class="form-control"
+    name="editOn"
+    value="{{ selectedPost.tittle }}"
+    [(ngModel)] = "selectedPost.tittle"
+    onfocus="this.select()"
+    autofocus
+  />
+  <button class="btn btn-info" (click)="onUpdatePost(selectedPost)">
+    Update Post
+  </button>
+</div>

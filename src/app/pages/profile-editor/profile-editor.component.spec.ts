@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfileEditorComponent } from './profile-editor.component';
@@ -8,7 +9,8 @@ describe('ProfileEditorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfileEditorComponent ]
+      declarations: [ ProfileEditorComponent ],
+      imports: [ReactiveFormsModule]
     })
     .compileComponents();
   });

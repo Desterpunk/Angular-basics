@@ -10,7 +10,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { ChildAComponent } from './pages/child-a/child-a.component'; 
 import { ChildBComponent } from './pages/child-b/child-b.component'; 
 import { NameEditorComponent } from './pages/name-editor/name-editor.component'; 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileEditorComponent } from './pages/profile-editor/profile-editor.component'; 
 import { ListComponent } from './pages/list/list.component'; 
 
@@ -31,6 +31,7 @@ import { ListComponent } from './pages/list/list.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
